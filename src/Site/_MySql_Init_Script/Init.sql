@@ -5,11 +5,11 @@ USE produtosdb;
 DROP TABLE IF EXISTS `Produtos`;
 
 CREATE TABLE `Produtos` (
-  `ProdutoId` INT AUTO_INCREMENT,
+  `Id` INT AUTO_INCREMENT,
   `Nome` VARCHAR(80) NOT NULL,
   `Categoria` VARCHAR(50) NOT NULL,
-  `Preco` DECIMAL(10,2) NOT NULL,
-  PRIMARY KEY (`ProdutoId`)
+  `Valor` DECIMAL(10,2) NOT NULL,
+  PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `Produtos` WRITE;

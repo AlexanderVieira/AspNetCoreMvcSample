@@ -9,14 +9,14 @@ networks:
 services:
 
       mysql:
-        image: "mysql:5.7"
+        image: "mysql:5.7.31"
         volumes:
           - datasource:/var/lib/mysql
           - ./_MySql_Init_Script:/docker-entrypoint-initdb.d
         networks:
           - backend
         environment:
-          - MYSQL_ROOT_PASSWORD=numsey
+          - MYSQL_ROOT_PASSWORD=root
           - bind-address=0.0.0.0
       
       mvc:
